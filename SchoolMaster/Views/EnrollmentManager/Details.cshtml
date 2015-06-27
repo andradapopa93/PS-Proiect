@@ -1,0 +1,30 @@
+﻿@model SchoolMaster.Models.Enrollment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Enrollment</legend>
+
+    <div class="display-label">Course</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Course.Name)
+    </div>
+
+    <div class="display-label">Student</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Student.LastName)
+    </div>
+
+    <div class="display-label">Grade</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Grade)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EnrollmentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

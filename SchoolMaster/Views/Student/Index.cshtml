@@ -1,0 +1,15 @@
+﻿@model IEnumerable<SchoolMaster.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Browse Students</h3>
+<p>
+    Select from @Model.Count() students:</p>
+<ul>
+    @foreach (var student in Model)
+    {
+        <li>@Html.ActionLink(student.LastName,"Browse", new { student = student.LastName })</li>
+    }
+</ul>

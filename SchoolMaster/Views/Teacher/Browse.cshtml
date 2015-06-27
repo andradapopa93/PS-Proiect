@@ -1,0 +1,16 @@
+﻿@model IEnumerable<SchoolMaster.Models.Teacher>
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h3>Teachers</h3>
+
+<ul>
+    @foreach (var teacher in Model)
+    {
+        <li>
+            @Html.ActionLink(teacher.LastName, "Details", new { id = teacher.TeacherId })
+        </li>
+    }
+</ul>

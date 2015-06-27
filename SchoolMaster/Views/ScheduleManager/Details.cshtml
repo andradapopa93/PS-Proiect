@@ -1,0 +1,35 @@
+﻿@model SchoolMaster.Models.Schedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Schedule</legend>
+
+    <div class="display-label">Course</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Course.Name)
+    </div>
+
+    <div class="display-label">Hour</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Hour)
+    </div>
+
+    <div class="display-label">Day</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Day)
+    </div>
+
+    <div class="display-label">Room</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Room)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ScheduleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
